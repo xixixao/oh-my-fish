@@ -30,6 +30,8 @@ set -gx BOXEN_HOME /opt/boxen
 set -gx BOXEN_LOG_DIR /opt/boxen/log
 set -gx BOXEN_POSTGRESQL_PORT 15432
 set -gx BOXEN_POSTGRESQL_URL postgres://localhost:$BOXEN_POSTGRESQL_PORT/
+set -gx BOXEN_REDIS_PORT 16379
+set -gx BOXEN_REDIS_URL redis://localhost:$BOXEN_REDIS_PORT/
 set -gx BOXEN_SOCKET_DIR /opt/boxen/data/project-sockets
 set -gx BOXEN_SRC_DIR /Users/bpinto/src
 set -gx CFLAGS -I/opt/boxen/homebrew/include
