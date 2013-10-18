@@ -17,7 +17,7 @@ set PATH $BOXEN_HOME/bin $PATH
 # Sourcing the real files is too slow
 #for f in $BOXEN_HOME/env.d/*.sh;
   #if test -f $f
-    #source $f
+    #source_script $f
   #end
 #end
 
