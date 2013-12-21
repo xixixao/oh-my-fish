@@ -9,12 +9,13 @@ end
 begin
 
   function fish_prompt
-    set -l cyan (set_color 0cf)
+    set -l red (set_color f00)
     set -l normal (set_color normal)
 
-    set -l cwd $cyan(basename (prompt_pwd))
+    set -l clock (date '+%H:%M:%S')
+    set -l cwd (basename (prompt_pwd))
 
-    echo -n -s $cwd $git_info $normal ' '
+    echo -n -s $red $clock ' ' $cwd $normal ' '
   end
 
   function fish_right_prompt
