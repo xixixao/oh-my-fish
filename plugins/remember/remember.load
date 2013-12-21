@@ -1,0 +1,7 @@
+set -g LAST_DIR "$HOME/.lastdir"
+
+function __remember_hook --on-variable PWD
+  pwd > "$LAST_DIR"
+end
+
+cd (cat $LAST_DIR)
