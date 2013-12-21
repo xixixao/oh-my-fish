@@ -1,5 +1,5 @@
 function gam
-  set -l stat (git --no-pager diff --color --stat HEAD)
+  set -l stat (git --no-pager diff --color --stat HEAD ^/dev/null)
   [ "$stat" != "" ]
   and _print_multiline $stat
   and read -p "set_color green; echo -n 'OK? '; set_color normal"
