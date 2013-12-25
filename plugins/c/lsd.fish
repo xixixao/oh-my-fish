@@ -1,5 +1,5 @@
 function lsd
   set_color blue
-  ls -l | egrep '^d' | perl -lpe 's/(.*?\d\d:\d\d|.*?\d  \d{4}) //' | column
+  find . -type d -maxdepth 1 -not -name '.*' -exec echo '{}' \; | perl -lpe 's/^\.\///' | column
   set_color normal
 end
