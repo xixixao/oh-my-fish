@@ -3,7 +3,7 @@ function gam
   [ "$stat" != "" ]
   and _print_multiline $stat
   and read -p "set_color green; echo -n 'OK? '; set_color normal"
-  _suffix_message $argv | xargs git commit
+  _suffix_message $argv | xargs git commit -a
 end
 
 completeas gam 'git commit'
