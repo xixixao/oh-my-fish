@@ -16,7 +16,7 @@ function _suffix_message
     end
   end
   if [ -n "$append" ]
-    echo $passed "-m '$concated'"
+    echo $passed -m "'$concated'"
   else
     echo $passed
   end
