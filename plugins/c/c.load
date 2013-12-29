@@ -1,0 +1,6 @@
+function c -d "quickly cd and ls"
+  cd $argv
+  lsd
+end
+
+complete --command c --exclusive --arguments '(__fish_complete_cd)'
