@@ -1,5 +1,5 @@
 function gis
-  git status -bs $argv
+  git-number -s -- -b $argv
 end
 
 completeas gis 'git status'

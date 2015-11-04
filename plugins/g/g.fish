@@ -1,5 +1,5 @@
 function g
-  git checkout $argv
+  git-number checkout $argv
 end
 
 completeas g 'git checkout'
