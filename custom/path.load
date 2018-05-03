@@ -1,1 +1,1 @@
-set PATH /usr/local/git/bin $PATH ~/bin ~/bin/nimrod/bin /usr/local/eerolanguage/bin
+set PATH $PATH ~/bin /usr/local/eerolanguage/bin /Users/srb/.cargo/bin
