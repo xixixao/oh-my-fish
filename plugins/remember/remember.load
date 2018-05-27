@@ -1,3 +1,6 @@
+status --is-login
+or exit 0
+
 set -g LAST_DIR "$HOME/.lastdir"
 
 function __remember_hook --on-variable PWD
