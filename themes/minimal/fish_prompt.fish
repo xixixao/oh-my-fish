@@ -28,24 +28,30 @@ begin
     set -l cyan (set_color 0cf)
     set -l normal (set_color normal)
 
+    set hg_branch_name (bash -c 'source /opt/facebook/share/scm-prompt && _dotfiles_scm_info %s')
+
     if [ (_git_branch_name) ]
       set -l git_branch (_git_branch_name)
-      set git_info "$cyan$git_branch"
+      set sc_info "$cyan$git_branch"
 
       set -l nu (_number_untracked_files)
       if [ $nu -gt 0 ]
         set -l dirty "$gray$nu"
-        set git_info "$dirty $git_info"
+        set sc_info "$dirty $sc_info"
       end
 
       set -l nm (_number_modified_files)
       if [ $nm -gt 0 ]
         set -l dirty "$yellow$nm"
-        set git_info "$dirty $git_info"
+        set sc_info "$dirty $sc_info"
       end
     end
 
-    echo -n -s $git_info
+    if [ hg_branch_name ]
+      set sc_info "$cyan$hg_branch_name"
+    end
+
+    echo -n -s $sc_info
   end
 
 end
